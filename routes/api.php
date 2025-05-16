@@ -1,5 +1,3 @@
 <?php
 
-Route::get('/user', function () {
-    return 'John Doe';
-});
+require __DIR__ . '/BO/bo.php';
