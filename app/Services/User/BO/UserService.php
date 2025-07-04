@@ -4,6 +4,7 @@ namespace App\Services\User\BO;
 
 use App\Http\Dto\User\BO\CreateUserDto;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserService
 {
@@ -19,7 +20,7 @@ class UserService
         User::create([
             'name' => $dto->name,
             'email' => $dto->email,
-            'password' => \Hash::make('password'),
+            'password' => Hash::make('password'),
         ]);
     }
 }
